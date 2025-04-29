@@ -1,0 +1,23 @@
+# Install environment with
+# conda env create -f requirements.yml
+name: DTGeoWF_Step4_env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - cartopy
+  - msnoise=1.6
+  - sqlalchemy<2.0
+  - sqlalchemy-utils
+  - obspy=1.4
+  - pandas
+  - pytest
+  - pytest-json-report
+  - statsmodels
+  - tqdm
+  - git
+  - pip
+  - pytz
+  - pygmt
+  - ipympl
+  - h5py
