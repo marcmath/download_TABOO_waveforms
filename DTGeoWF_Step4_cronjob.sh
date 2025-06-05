@@ -25,7 +25,7 @@ utcdate=$(date -u +"%Y-%m-%dT%H:%M:%S")
 if [ "$exit_code" -eq 255 ]; then
 	recipient=iris.christadler@lmu.de
 	subject="DTGeoWF_Step4_cronjob.sh: detect_event.py aborted with an error"  
-	body= "$utcdate: The DTGeoWF_Step4 detected problems. See DTGeoWF_Step4_detect_event.err for more information"
+	body="$utcdate: The DTGeoWF_Step4 detected problems. See DTGeoWF_Step4_detect_event.err for more information"
 	if [ $mail_worx -eq 1 ]; then
 		# send email 
 		echo "$body" | mail -s "$subject" "$recipient"
@@ -41,8 +41,8 @@ elif [ "$exit_code" -eq 0 ]; then
 
 elif [ "$exit_code" -gt 0 ]; then
 	recipient=iris.christadler@lmu.de
-	subject= "DTGeoWF_Step4_cronjob.sh: AltoTiberina Earthquake happened!"
-	body= "$utcdate: The DTGeoWF_Step4 detected $exit_code earthquake(s). See DTGeoWF_Step4_detect_event.log for more information"
+	subject="DTGeoWF_Step4_cronjob.sh: AltoTiberina Earthquake happened!"
+	body="$utcdate: The DTGeoWF_Step4 detected $exit_code earthquake(s). See DTGeoWF_Step4_detect_event.log for more information"
 
 	if [ $mail_worx -eq 1 ]; then
 		# send email 
