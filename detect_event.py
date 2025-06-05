@@ -31,7 +31,7 @@ t = UTCDateTime()
 # or adjust to match the cronjob repeat rate 
 # (1hour=60sec/min*60min) 
 #timeframe_hours= 24*7
-timeframe_hours= 24*5
+timeframe_hours= 1
 timeframe= t-(timeframe_hours*3600)
 
 # connect to client
