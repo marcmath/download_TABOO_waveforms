@@ -21,7 +21,8 @@ import os
 # Exit Code   n: n EQs happened -> launch Step 4/5 with max magnitude EQ, send mail
 # Exit Code 255: Some error happened, send email to check script 
 # #################################################################################
-DEBUG=True
+#DEBUG=True
+DEBUG=False
 
 # Get current time 
 t = UTCDateTime()
