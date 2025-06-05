@@ -52,7 +52,7 @@ try:
                             minlatitude=41.9,
                             maxlatitude=43.8,
                             #eventtype="earthquake",
-                            minmagnitude=2.0,
+                            minmagnitude=4.0,
                             orderby="magnitude")
 except FDSNNoDataException:
     print(f"{t}:No EQ reported since {timeframe}")
