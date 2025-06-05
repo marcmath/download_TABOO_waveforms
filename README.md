@@ -10,9 +10,9 @@ For rapid response, this will run hourly via crontab:
 
 ## Installation of environment
 
-Please generate a virtual environment first with all dependencies installed as given in requirement.yml
+Please generate a virtual environment first with all dependencies installed as given in environment.yml
 ```
-conda env create -f requirements.yml
+conda env create -f environment.yml
 conda list
 conda activate DTGeoWF_Step4_env
 ```
