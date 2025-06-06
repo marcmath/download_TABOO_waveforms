@@ -22,7 +22,7 @@ You might try to run the obspy tests to verify your installation
 obspy-runtests --report
 ```
 
-## Adding Data and additional Scripts
+## Adding Data and Additional Scripts
 
 To have the cronjob in one directory please download also Step5 
 ```
@@ -34,7 +34,11 @@ and add the AltoTiberina `AltoTiberinaCatalog` from the Geo-INQUIRE SDL:
 
 https://sdl-dev.hpc.cineca.it/app/experiments/567/summary
 
-Try if everything is working by launching './DTGeoWF_Step4_cronjob.sh' manually. You might want to increase the `timeframe_hours` or lower `minmagnitude` to make sure that it will detect at least one earthquake. 
+## Adjust Path Names for Cronjob
+
+Cronjob will need full path names to scripts and for your anaconda installation so please adapt 'DTGeoWF_Step4_cronjob.sh' and 'DTGeoWF_Step4_cronjob.txt'.
+
+Try if everything is working by launching the line '/bin/bash /home/.../DTGeoWF_Step4_cronjob.sh' from 'DTGeoWF_Step4_cronjob.txt' manually. You might want to increase the `timeframe_hours` or lower `minmagnitude` to make sure that it will detect at least one earthquake. 
 
 ## Installation of cronjob
 
@@ -46,3 +50,8 @@ and check if it has been installed via
 ```
 crontab -l
 ```
+If you need to edit it, use
+```
+crontab -e
+```
+To see if it is working use 'grep CRON /var/log/syslog' on Ubuntu systems and check the logfile 'DTGeoWF_Step4_detect_event.log'
