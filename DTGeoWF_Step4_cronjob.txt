@@ -1,1 +1,1 @@
-0 * * * * /usr/bin/bash ./DTGeoWF_Step4_cronjob.sh
+0 * * * * /usr/bin/bash /home/christadler/githubclones/download_TABOO_waveforms/DTGeoWF_Step4_cronjob.sh

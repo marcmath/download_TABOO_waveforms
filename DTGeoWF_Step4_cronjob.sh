@@ -11,8 +11,9 @@
 mail_worx=0
 
 # activate python environment (see Readme.md)
-#conda env list
-source /home/christadler/anaconda3/bin/conda activate DTGeoWF_Step4_env
+conda env list
+source /home/christadler/anaconda3/bin/activate DTGeoWF_Step4_env
+#echo "Environment sourced"
 
 # detect if an EQ happened
 # exit_code   0: no EQ
