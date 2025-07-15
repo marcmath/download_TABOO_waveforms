@@ -11,6 +11,8 @@
 mailw=0
 
 # activate python environment (see Readme.md)
+# TODO: Adjust the path to your conda installation, 
+# $HOME will not work here since the cronjob might run under a different user
 source /home/christadler/anaconda3/etc/profile.d/conda.sh
 conda activate DTGeoWF_Step4_env
 
@@ -21,6 +23,8 @@ conda activate DTGeoWF_Step4_env
 # exit_code 255: error
 
 # This script is directly called by crontab so it needs the full path
+# TODO: Adjust the path, 
+# $HOME will not work here since the cronjob might run under a different user
 cronPath=/home/christadler/githubclones/download_TABOO_waveforms
 logfile=$cronPath/DTGeoWF_Step4_detect_event.log
 errfile=$cronPath/DTGeoWF_Step4_detect_event.err

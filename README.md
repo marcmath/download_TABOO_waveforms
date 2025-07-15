@@ -36,7 +36,9 @@ https://sdl-dev.hpc.cineca.it/app/experiments/567/summary
 
 ## Adjust Path Names for Cronjob
 
-Cronjob will need full path names to scripts and for your anaconda installation so please adapt 'DTGeoWF_Step4_cronjob.sh' and 'DTGeoWF_Step4_cronjob.txt'.
+Cronjob will need full path names to scripts and for your anaconda installation so please adapt 'DTGeoWF_Step4_cronjob.sh' (path to 'conda.sh' and path to 'download_TABOO_waveforms' directory) and 'DTGeoWF_Step4_cronjob.txt'. 
+
+If your mail client is properly set up (try with 'mail -s "test" <your_email_address>"), you could set 'mailw=1' and adjust your email address. Otherwise you will find the output in the '*.log' and '*.err' files.
 
 Try if everything is working by launching the line '/bin/bash /home/.../DTGeoWF_Step4_cronjob.sh' from 'DTGeoWF_Step4_cronjob.txt' manually. You might want to increase the `timeframe_hours` or lower `minmagnitude` to make sure that it will detect at least one earthquake. 
 

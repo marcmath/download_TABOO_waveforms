@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Latest changes: 2025-03-31
+Latest changes: 2025-07-15
 
 @author: iris.christadler@lmu.de
 """
@@ -85,6 +85,9 @@ eq_time=f"'{toe.year},{toe.month},{toe.day},{toe.hour},{toe.minute},{toe.second}
 print(f"{t}: download_TABOO_waveforms called for EQ with highest magnitude ({eq_time}): ")
 print(cat[0]) # EQ with highest magnitude
 
+# delete folder content to only compare waveforms from the current earthquake
+os.system(f"rm -f TABOO_waveforms/*.mseed")
+os.system(f"rm -f TABOO_waveforms/*.xml")
 # call download_TABOO_waveforms.py with eq_time, output_folder and duration
 os.system(f"python3 download_TABOO_waveforms.py {eq_time} TABOO_waveforms 60 ")
 

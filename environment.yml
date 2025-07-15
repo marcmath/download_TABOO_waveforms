@@ -4,20 +4,20 @@ name: DTGeoWF_Step4_env
 channels:
   - conda-forge
 dependencies:
-  - python=3.11
-  - cartopy
+  - python=3.11         # needed for Simulation Data Lake Command Line Interface (SDL CLI)
+  - cartopy             # needed by obspy (needed by detect_event.py)
   - msnoise=1.6
   - sqlalchemy<2.0
   - sqlalchemy-utils
-  - obspy=1.4
-  - pandas
-  - pytest
-  - pytest-json-report
+  - obspy=1.4           # needed by detect_event.py to catch events
+  - pandas              # needed by SeisSol_ParamStudies
+  - pytest              # needed by obspy-test
+  - pytest-json-report  # needed by obspy-test
   - statsmodels
   - tqdm
-  - git
-  - pip
+  - git                 # needed to download SDL CLI
+  - pip                 # needed to install SDL CLI
   - pytz
   - pygmt
   - ipympl
-  - h5py
+  - h5py                # hdf5 support 
