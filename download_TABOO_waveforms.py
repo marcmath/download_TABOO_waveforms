@@ -70,10 +70,10 @@ def get_TABOO_waveforms(eq_time,obsdir,dt=100):
             try:
                 # Request waveform data for the station
                 st = client.get_waveforms(network=net.code, station=station.code, location="*", channel="BH?,HH?,EH?", 
-                                          starttime=starttime, endtime=endtime,attach_response=True)     
+                                          starttime=starttime, endtime=endtime,attach_response=False)     
                 
                 # Remove instrument response
-                st = st.remove_response()       
+                st = st.remove_response(inventory)       
                 
                 # Save data in MiniSEED format
                 filename = f"{obsdir}/{net.code}_{station.code}_{starttime.date}_{starttime.hour}_{duration}sec_RespRemouved.mseed"
