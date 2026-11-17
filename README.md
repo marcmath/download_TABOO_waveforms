@@ -32,7 +32,7 @@ cp search_SeisSol_ensemble/search_catalog_for_best_fit_model.py download_TABOO_w
 
 and add the AltoTiberina `AltoTiberinaCatalog` from the Geo-INQUIRE SDL:
 
-https://sdl-dev.hpc.cineca.it/app/experiments/567/summary
+https://sdl.hpc.cineca.it/app/experiments/86/versions/1.0.0/summary
 
 ## Adjust Path Names for Cronjob
 
